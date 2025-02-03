@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using T4._Activitats;
 namespace ExercicisTema4
 {
@@ -6,10 +7,14 @@ namespace ExercicisTema4
     {
         public static void Main()
         {
-            Parella<string, int> parella1 = new Parella<string, int>("Miau", 4);
-            parella1.ShowValues();
-            Parella<double, bool> parella2 = new Parella<double, bool>(0.0, true);
-            parella2.ShowValues();
+            ArrayList arrayList = new ArrayList();
+            arrayList.Add(Console.ReadLine());
+            arrayList.Add(Console.ReadLine());
+            arrayList.Add(Console.ReadLine());
+            foreach (var i in arrayList)
+            {
+                Console.WriteLine(i);
+            }
         }
     }
 }
