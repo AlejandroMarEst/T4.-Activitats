@@ -7,13 +7,18 @@ namespace ExercicisTema4
     {
         public static void Main()
         {
-            Dictionary<string, int> alumnes = new Dictionary<string, int>();
-            alumnes.Add(Console.ReadLine(), Convert.ToInt32(Console.ReadLine()));
-            alumnes.Add(Console.ReadLine(), Convert.ToInt32(Console.ReadLine()));
-            alumnes.Add(Console.ReadLine(), Convert.ToInt32(Console.ReadLine()));
-            foreach (var i in alumnes)
+            const string valors = "Quants noms vols introduir";
+            List<string> noms = new List<string>();
+            int numNoms;
+            numNoms = MyUtils.GetPositiveNum();
+            for (int i = 0; i < numNoms; i++)
             {
-                Console.WriteLine(i);
+                noms.Add(Console.ReadLine());
+            }
+            noms.Sort();
+            foreach (var nom in noms)
+            {
+                Console.WriteLine(nom);
             }
         }
     }
