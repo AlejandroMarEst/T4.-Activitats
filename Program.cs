@@ -7,11 +7,11 @@ namespace ExercicisTema4
     {
         public static void Main()
         {
-            ArrayList arrayList = new ArrayList();
-            arrayList.Add(Console.ReadLine());
-            arrayList.Add(Console.ReadLine());
-            arrayList.Add(Console.ReadLine());
-            foreach (var i in arrayList)
+            Dictionary<string, int> alumnes = new Dictionary<string, int>();
+            alumnes.Add(Console.ReadLine(), Convert.ToInt32(Console.ReadLine()));
+            alumnes.Add(Console.ReadLine(), Convert.ToInt32(Console.ReadLine()));
+            alumnes.Add(Console.ReadLine(), Convert.ToInt32(Console.ReadLine()));
+            foreach (var i in alumnes)
             {
                 Console.WriteLine(i);
             }
