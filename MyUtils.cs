@@ -17,5 +17,6 @@ namespace T4._Activitats
             }
             return value;
         }
+        public static bool CheckOddNum(int num) => num % 2 == 0;
     }
 }
