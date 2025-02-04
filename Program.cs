@@ -7,18 +7,20 @@ namespace ExercicisTema4
     {
         public static void Main()
         {
-            const string valors = "Quants noms vols introduir";
-            List<string> noms = new List<string>();
-            int numNoms;
-            numNoms = MyUtils.GetPositiveNum();
-            for (int i = 0; i < numNoms; i++)
+            const string valors = "Quants nums vols introduir";
+            List<int> nums = new List<int>();
+            int numNums;
+            numNums = MyUtils.GetPositiveNum();
+            for (int i = 0; i < numNums; i++)
             {
-                noms.Add(Console.ReadLine());
+                nums.Add(MyUtils.GetPositiveNum());
             }
-            noms.Sort();
-            foreach (var nom in noms)
+            nums.Sort();
+            foreach (var num in nums)
             {
-                Console.WriteLine(nom);
+                if (MyUtils.CheckOddNum(num)){
+                    Console.WriteLine(num);
+                }
             }
         }
     }
