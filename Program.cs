@@ -8,20 +8,13 @@ namespace ExercicisTema4
     {
         public static void Main()
         {
-            ArrayList arrayList = new ArrayList() { "Maria", "Joan", "Anna", 42, true };
-            foreach (var item in arrayList)
-            {
-                Console.WriteLine(item);
-            }
-            arrayList.Remove(42);
-            arrayList.Remove(true);
-            arrayList.Insert(2, "Pere");
-            Console.WriteLine();
-            foreach (var item in arrayList)
-            {
-                Console.WriteLine(item);
-            }
-            arrayList.ToArray();
+            List<int> llistaNums = new List<int>() { 5, 10, 15, 20, 25 };
+            llistaNums.Add(30);
+            llistaNums.Insert(1, 7);
+            llistaNums.Remove(15);
+            llistaNums = llistaNums.OrderDescending().ToList();
+            llistaNums = llistaNums.Where(item => item % 2 == 0).ToList();
+            llistaNums.ForEach(item => Console.WriteLine(item));
         }
     }
 }
