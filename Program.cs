@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Reflection.PortableExecutable;
 using T4._Activitats;
 namespace ExercicisTema4
 {
@@ -7,21 +8,20 @@ namespace ExercicisTema4
     {
         public static void Main()
         {
-            const string valors = "Quants nums vols introduir";
-            List<int> nums = new List<int>();
-            int numNums;
-            numNums = MyUtils.GetPositiveNum();
-            for (int i = 0; i < numNums; i++)
+            ArrayList arrayList = new ArrayList() { "Maria", "Joan", "Anna", 42, true };
+            foreach (var item in arrayList)
             {
-                nums.Add(MyUtils.GetPositiveNum());
+                Console.WriteLine(item);
             }
-            nums.Sort();
-            foreach (var num in nums)
+            arrayList.Remove(42);
+            arrayList.Remove(true);
+            arrayList.Insert(2, "Pere");
+            Console.WriteLine();
+            foreach (var item in arrayList)
             {
-                if (MyUtils.CheckOddNum(num)){
-                    Console.WriteLine(num);
-                }
+                Console.WriteLine(item);
             }
+            arrayList.ToArray();
         }
     }
 }
