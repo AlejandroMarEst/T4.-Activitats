@@ -17,6 +17,12 @@ namespace T4._Activitats
             }
             return value;
         }
-        public static bool CheckOddNum(int num) => num % 2 == 0;
+        /// <summary>
+        /// Gets a number and checks if its ODD
+        /// </summary>
+        /// <param name="num">Number to be checked</param>
+        /// <returns>True if its odd, false if its even</returns>
+        public static bool CheckEvenNum(int num) => num % 2 == 0;
+        public static bool CheckFutureDate(DateTime date1, DateTime date2) => date1 < date2;
     }
 }
