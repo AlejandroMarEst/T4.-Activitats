@@ -8,11 +8,12 @@ namespace ExercicisTema4
     {
         public static void Main()
         {
-            const string DiaAvui = "Today it's: {0}";
-            DateTime date = DateTime.Now;
-            DayOfWeek diaActual = date.DayOfWeek;
-            Console.WriteLine(DiaAvui, diaActual);
-            
+            const string InsertBirthDate = "Insert ur birthdate: ";
+            DateTime userDate;
+            Console.WriteLine(InsertBirthDate);
+            userDate = Convert.ToDateTime(Console.ReadLine());
+            Employee employee = new Employee(userDate);
+            Console.WriteLine(employee.AgeCalc());            
         }
     }
 }
