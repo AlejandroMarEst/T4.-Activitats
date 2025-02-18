@@ -8,12 +8,9 @@ namespace ExercicisTema4
     {
         public static void Main()
         {
-            const string InsertBirthDate = "Insert ur birthdate: ";
-            DateTime userDate;
-            Console.WriteLine(InsertBirthDate);
-            userDate = Convert.ToDateTime(Console.ReadLine());
-            Employee employee = new Employee(userDate);
-            Console.WriteLine(employee.AgeCalc());            
+            List<int> list = new List<int> { 10,258,564,31,5484,84,864,4,64,64 };
+            int sum = list.Sum();
+            Console.WriteLine(sum);
         }
     }
 }
