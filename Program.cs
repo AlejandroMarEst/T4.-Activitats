@@ -8,11 +8,11 @@ namespace ExercicisTema4
     {
         public static void Main()
         {
-            List<int> list = new List<int>(10) { 10,258,563,31,5484,87,864,5,64,63 };
-            list = list.Where(x => x % 2 == 0).ToList();
-            foreach(int i in list)
+            string[] arr = new string[] { "Figaflor", "Formatge", "Pastanaga", "Llaminadura"};
+            List<string> list = arr.ToList();
+            foreach (string s in list)
             {
-                Console.WriteLine(i);
+                Console.WriteLine(s);
             }
         }
     }
