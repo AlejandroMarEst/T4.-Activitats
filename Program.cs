@@ -8,12 +8,10 @@ namespace ExercicisTema4
     {
         public static void Main()
         {
-            Dictionary<string, double> dictionary = new Dictionary<string, double>();
-            dictionary.Add("Manu", 800.00);
-            dictionary.Add("Gabi", 800.00);
-            dictionary.Add("Paul", 1000.00);
-            foreach (var item in dictionary) { 
-                Console.WriteLine(item.Key + ", " + item.Value);
+            List<int> list = new List<int> { 10, 20, 849489, 87, 455, 512, 100 };
+            list = list.Where(x => x < 500).ToList();
+            foreach (int item in list) {
+                Console.WriteLine(item);
             }
         }
     }
