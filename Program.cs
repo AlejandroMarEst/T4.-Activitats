@@ -8,11 +8,12 @@ namespace ExercicisTema4
     {
         public static void Main()
         {
-            string[] arr = new string[] { "Figaflor", "Formatge", "Pastanaga", "Llaminadura"};
-            List<string> list = arr.ToList();
-            foreach (string s in list)
-            {
-                Console.WriteLine(s);
+            Dictionary<string, double> dictionary = new Dictionary<string, double>();
+            dictionary.Add("Manu", 800.00);
+            dictionary.Add("Gabi", 800.00);
+            dictionary.Add("Paul", 1000.00);
+            foreach (var item in dictionary) { 
+                Console.WriteLine(item.Key + ", " + item.Value);
             }
         }
     }
