@@ -9,10 +9,13 @@ namespace ExercicisTema4
     {
         public static void Main()
         {
-            Console.WriteLine(MyUtils.IsValidPhone("600123456"));  // True
-            Console.WriteLine(MyUtils.IsValidPhone("600 123 456"));      // True
-            Console.WriteLine(MyUtils.IsValidPhone("600 123 45"));      // False
-            Console.WriteLine(MyUtils.IsValidPhone("+34 600 123 456"));      // True
+            const string Text = "He tret un 10 al examen num 5 del Modul 6";
+            List<int> lista = new List<int>();
+            lista = MyUtils.ExtractNumbers(Text);
+            foreach(int num in lista)
+            {
+                Console.WriteLine(num);
+            }
         }
     }
 }
