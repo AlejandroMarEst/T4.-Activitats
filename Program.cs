@@ -7,21 +7,12 @@ namespace ExercicisTema4
 {
     public class Program
     {
-        public delegate void DelegateEx(string msg);
-        public static void WriteMSG(string msg)
-        {
-            Console.WriteLine(msg);
-        }
-        public static void WriteStarryMSG(string msg)
-        {
-            Console.WriteLine("*" + msg + "*");
-        }
         public static void Main()
         {
-            const string Text = "Hola, bon dia";
-            DelegateEx delegat = WriteMSG;
-            delegat += WriteStarryMSG;
-            delegat(Text);
+            Func<int, int, int> multiply = (x, y) => x * y;
+            Console.WriteLine(multiply(4, 3));
+            Action<int, int> showPlus = (x, y) => Console.WriteLine(x + y);
+            showPlus(1, 7);
         }
     }
 }
