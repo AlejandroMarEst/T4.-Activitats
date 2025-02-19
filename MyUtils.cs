@@ -33,5 +33,14 @@ namespace T4._Activitats
             else if (Regex.IsMatch(phone, @"(?i)^\+34 [6-7][0-9]{2} [0-9]{3} [0-9]{3}$")) { return true; }
             else { return false; }
         }
+        public static List<int> ExtractNumbers(string text) {
+            List<int> numbers = new List<int>();
+            MatchCollection matches = Regex.Matches(text, "\\d+");
+            foreach (Match match in matches)
+            {
+                numbers.Add(int.Parse(match.Value));
+            }
+            return numbers;
+        }
     }
 }
