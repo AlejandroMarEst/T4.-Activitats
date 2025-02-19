@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace T4._Activitats
@@ -24,5 +25,6 @@ namespace T4._Activitats
         /// <returns>True if its odd, false if its even</returns>
         public static bool CheckEvenNum(int num) => num % 2 == 0;
         public static bool CheckFutureDate(DateTime date1, DateTime date2) => date1 < date2;
+        public static bool IsValidEmail(string mail) => Regex.IsMatch(mail, @"(?i)^[A-Z1-9].*@[A-Z].*\.com$");
     }
 }
