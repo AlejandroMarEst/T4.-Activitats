@@ -9,8 +9,10 @@ namespace ExercicisTema4
     {
         public static void Main()
         {
-            Console.WriteLine(MyUtils.IsValidEmail("usuari@gmail.com"));  // True
-            Console.WriteLine(MyUtils.IsValidEmail("usuari@gmail"));      // False
+            Console.WriteLine(MyUtils.IsValidPhone("600123456"));  // True
+            Console.WriteLine(MyUtils.IsValidPhone("600 123 456"));      // True
+            Console.WriteLine(MyUtils.IsValidPhone("600 123 45"));      // False
+            Console.WriteLine(MyUtils.IsValidPhone("+34 600 123 456"));      // True
         }
     }
 }

@@ -26,5 +26,12 @@ namespace T4._Activitats
         public static bool CheckEvenNum(int num) => num % 2 == 0;
         public static bool CheckFutureDate(DateTime date1, DateTime date2) => date1 < date2;
         public static bool IsValidEmail(string mail) => Regex.IsMatch(mail, @"(?i)^[A-Z1-9].*@[A-Z].*\.com$");
+        public static bool IsValidPhone(string phone)
+        {
+            if (Regex.IsMatch(phone, @"(?i)^[6-7][0-9]{8}$")) { return true; }
+            else if (Regex.IsMatch(phone, @"(?i)^[6-7][0-9]{2} [0-9]{3} [0-9]{3}$")) { return true; }
+            else if (Regex.IsMatch(phone, @"(?i)^\+34 [6-7][0-9]{2} [0-9]{3} [0-9]{3}$")) { return true; }
+            else { return false; }
+        }
     }
 }
