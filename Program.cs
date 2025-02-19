@@ -7,12 +7,23 @@ namespace ExercicisTema4
 {
     public class Program
     {
+        public delegate int DelegateEx(int a, int b);
+        public static int AnonymousMethod(DelegateEx delegar)
+        {
+            return delegar(2, 4);
+        }
         public static void Main()
         {
-            Func<int, int, int> multiply = (x, y) => x * y;
-            Console.WriteLine(multiply(4, 3));
-            Action<int, int> showPlus = (x, y) => Console.WriteLine(x + y);
-            showPlus(1, 7);
+            int num = AnonymousMethod(delegate (int a, int b)
+            {
+                int num = 1;
+                for (int i = 0; i < b; i++)
+                {
+                    num *= a;
+                }
+                return num;
+            });
+            Console.WriteLine(num);
         }
     }
 }
