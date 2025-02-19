@@ -7,16 +7,11 @@ namespace ExercicisTema4
 {
     public class Program
     {
-        public delegate void Notificacio(string msg);
-        public static void PrintMessage(Notificacio msg)
-        {
-            msg("MissatgeAnonim");
-        }
         public static void Main()
         {
-            PrintMessage(delegate (string msg) {
-                Console.WriteLine(msg);
-            });
+            Func<int, int, int> lambda = (x, y) => x - y;
+            Console.WriteLine(lambda(10, 5));
+            Console.WriteLine(lambda(25, 12));
         }
     }
 }
