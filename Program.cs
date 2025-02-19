@@ -7,23 +7,16 @@ namespace ExercicisTema4
 {
     public class Program
     {
-        public delegate int DelegateEx(int a, int b);
-        public static int AnonymousMethod(DelegateEx delegar)
+        public delegate void Notificacio(string msg);
+        public static void PrintMessage(Notificacio msg)
         {
-            return delegar(2, 4);
+            msg("MissatgeAnonim");
         }
         public static void Main()
         {
-            int num = AnonymousMethod(delegate (int a, int b)
-            {
-                int num = 1;
-                for (int i = 0; i < b; i++)
-                {
-                    num *= a;
-                }
-                return num;
+            PrintMessage(delegate (string msg) {
+                Console.WriteLine(msg);
             });
-            Console.WriteLine(num);
         }
     }
 }
