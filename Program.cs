@@ -9,13 +9,10 @@ namespace ExercicisTema4
     {
         public static void Main()
         {
-            const string Text = "He tret un 10 al examen num 5 del Modul 6";
-            List<int> lista = new List<int>();
-            lista = MyUtils.ExtractNumbers(Text);
-            foreach(int num in lista)
-            {
-                Console.WriteLine(num);
-            }
+            const string Password1 = "Hola1234!";
+            const string Password2 = "hola1234";
+            Console.WriteLine(MyUtils.ValidatePassword(Password1));
+            Console.WriteLine(MyUtils.ValidatePassword(Password2));
         }
     }
 }

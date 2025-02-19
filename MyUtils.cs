@@ -42,5 +42,9 @@ namespace T4._Activitats
             }
             return numbers;
         }
+        public static bool ValidatePassword(string password)
+        {
+            return Regex.IsMatch(password, "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{7,}$");
+        }
     }
 }
